@@ -1,0 +1,84 @@
+#breadcrumbs {
+    margin-top: 15px;
+}
+#breadcrumbs ul {
+    background-color: #FFFFFF;
+    margin-bottom: 0px;
+    padding: 0px 15px;
+}
+.page-header {
+    margin: 15px 0 20px;
+}
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.marg20b {
+    margin-bottom: 20px !important;
+}
+
+.crop-image-source {
+    border: 1px solid #CCCCCC;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.crop-image-source .jcrop-holder {
+    margin: 0 auto;
+}
+.crop-image-target {
+    width:100px;
+    height:100px;
+    overflow:hidden;
+    margin: 0 auto;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+.multiselect-list .form-control {
+    height: 200px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.multiselect-list .form-control input {
+    float: left;
+    width: 6%;
+    height: 27px;
+    margin: 0px;
+}
+.multiselect-list .form-control label {
+    float: right;
+    width: 94%;
+    height: 27px;
+    margin: 0px;
+    line-height: 24px;
+}
+.multiselect-list .form-margin input {
+    margin-left: 6%;
+}
+.multiselect-list .form-margin label {
+    width: 88%;
+}
+
+.upload-progress { position:relative;border-radius: 3px;height:25px; margin-top:10px; }
+.upload-bar { background-color: #f1da36; width:0%; height:25px; border-radius: 3px; }
+.upload-percent { position:absolute; display:inline-block; top:3px; left:48%; }

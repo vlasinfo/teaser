@@ -1,0 +1,935 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>adPartner</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="/bundles/adexchange/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/bundles/adexchange/css/metisMenu.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="/bundles/adexchange/css/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/bundles/adexchange/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="/bundles/adexchange/css/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/bundles/adexchange/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="/bundles/adexchange/css/daterangepicker-bs3.css" rel="stylesheet" type="text/css">
+    <link href="/bundles/adexchange/css/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css">
+    <link href="/bundles/adexchange/css/bootstrap-clockpicker.min.css" rel="stylesheet" type="text/css">
+    <link href="/bundles/adexchange/css/bootstrap-combobox.css" rel="stylesheet" type="text/css">
+    <link href="/bundles/adexchange/css/dataTable.bootstrap.css" rel="stylesheet" type="text/css">
+
+    <!-- jsTree -->
+    <link rel="stylesheet" href="/bundles/adexchange/css/style.min.css"/>
+
+    <link rel="stylesheet" href="/bundles/adexchange/css/jquery.Jcrop.min.css" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
+    <!--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
+    <![endif]-->
+
+    <link href="/bundles/adexchange/css/custom.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://cp.adpartner.pro/">Ad Partner</a>
+        </div>
+        <!-- /.navbar-header -->
+
+        <div class="nav navbar-top-links navbar-left">
+            <ul class="nav" id="side-menu">
+
+                <li class="first">        <a href="/adcampaign/"><i class="fa fa-th-list fa-fw"></i> Кампании</a>
+                </li>
+
+
+                <li class="last">        <a href="/admediacampaign/"><i class="fa fa-th-large fa-fw"></i> Медиа кампании</a>
+                </li>
+
+
+            </ul>
+
+        </div>
+
+        <ul class="nav navbar-top-links navbar-right">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li>
+                        <span style="padding: 3px 20px;white-space: nowrap;"><i class="fa fa-user fa-fw"></i> vlasenko (vlasenkoj@gmail.com)</span>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="/logout"><i class="fa fa-sign-out fa-fw"></i> Выйти</a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-user -->
+            </li>
+            <!-- /.dropdown -->
+        </ul>
+
+
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+
+                    <li class="first">        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Статистика</a>
+                    </li>
+
+
+                    <li>        <a href="#"><i class="fa fa-file-o fa-fw"></i> Сайты</a>
+                    </li>
+
+
+                    <li>        <a href="#"><i class="glyphicon glyphicon-map-marker"></i> Заблокированные IP</a>
+                    </li>
+
+
+                    <li>        <a href="#"><i class="glyphicon glyphicon-tags"></i> Тематики</a>
+                    </li>
+
+
+                    <li class="last">        <a href="#"><i class="glyphicon glyphicon-map-marker"></i> Статистика по регионам</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </div>
+
+    </nav>
+
+    <div id="page-wrapper">
+        <div class="row">
+            <div id="breadcrumbs"><ol id="wo-breadcrumbs" class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Главная</span></a><meta itemprop="position" content="1" /><span class='separator'></span></li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Баннера</span></a><meta itemprop="position" content="2" /><span class='separator'></span></li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Баннер top_v1_728x90</span></a><meta itemprop="position" content="3" /><span class='separator'></span></li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><span itemprop="name">Редактирование</span><meta itemprop="position" content="4" /></li></ol></div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-12">
+
+                <h1 class="page-header">Редактировать баннер 'top_v1_728x90'</h1>
+
+            </div>
+
+            <div class="col-lg-6 pull-right">
+
+                <p>
+                <form name="form" method="post" action="#"><input type="hidden" name="_method" value="DELETE" />
+
+                    <button type="submit" id="form_submit" name="form[submit]" onclick="return confirm('Вы уверены что хотите удалить этот баннер?')" class="btn btn-default btn-danger" style="width:130px;">Удалить</button>
+                    <input type="hidden" id="form__token" name="form[_token]" value="cAyo2doGP_U_4-CWFNdhMiEp483Ng18XBrDHMumLuXs" /></form>
+                </p>
+
+                <p>
+                    <a href="#">
+                        <i class="fa fa-arrow-left fa-fw"></i>Вернуться к списку баннеров
+                    </a>
+                </p>
+
+            </div>
+
+            <form name="adexchangebundle_adunit" method="post" action="#"><input type="hidden" name="_method" value="PUT" />
+                <div class="col-lg-6">
+
+                    <div class="panel panel-default">
+
+                        <div class="panel-heading">
+                            Информация о баннере
+                        </div>
+
+                        <div class="panel-body">
+
+                            <div class="form-group ">
+                                <label for="adexchangebundle_adunit_title" class="required">Название</label>
+                                <input type="text" id="adexchangebundle_adunit_title" name="adexchangebundle_adunit[title]" required="required" maxlength="255" class="form-control" value="top_v1_728x90" />
+                            </div>
+                            <div class="form-group ">
+                                <label for="adexchangebundle_adunit_status" class="required">Статус</label>
+                                <select id="adexchangebundle_adunit_status" name="adexchangebundle_adunit[status]" class="form-control" autocomplete="off"><option value="active" selected="selected">Active</option><option value="not_active">Not Active</option></select>
+                            </div>
+                            <div class="form-group ">
+                                <label for="adexchangebundle_adunit_unit_type" class="required">Тип</label>
+                                <select id="adexchangebundle_adunit_unit_type" name="adexchangebundle_adunit[unit_type]" class="form-control"><option value="tizer" selected="selected">Тизер</option><option value="media">Медиа</option></select>
+                            </div>
+                            <div class="form-group ">
+                                <label for="adexchangebundle_adunit_sitePartner" class="required">Сайт</label>
+                                <select id="adexchangebundle_adunit_sitePartner" name="adexchangebundle_adunit[sitePartner]" class="form-control" autocomplete="off"><option value="1" selected="selected">ubr.ua</option><option value="2">gazeta.ua</option><option value="3">vesti.ua</option><option value="4">24tv.ua</option><option value="5">maiersplate.com</option><option value="6">hyser.com.ua</option><option value="7">football24.ua</option><option value="8">http://zaxid.net/</option><option value="9">http://radio24.ua/</option><option value="10">inforesist.org</option><option value="11">xsport.ua</option><option value="12">u-news.com.ua</option><option value="13">onpress.info</option><option value="14">infokava.com</option><option value="15">ipress.net.ua</option><option value="16">http://www.autocentre.ua/</option><option value="17">http://avtobazar.ua/</option><option value="18">eizvestia.com</option><option value="19">statuspress.com.ua</option><option value="20">expert.ua</option><option value="21">goloskarpat.info</option><option value="22">vsviti.com.ua</option><option value="23">terrawoman.ua</option><option value="24">http://drive-news.net/</option><option value="25">kolona.net</option><option value="26">mmr.net.ua</option><option value="27">62.ua</option><option value="28">642.ua</option><option value="29">buhgalter.com.ua</option><option value="30">gorod.dp.ua</option><option value="31">vnews.agency</option><option value="32">spert-xl.org</option><option value="33">gogetnews.info</option><option value="34">20khvylyn.com</option><option value="35">057.ua</option><option value="36">pmg.ua</option><option value="37">ukrinform.ua</option><option value="38">http://fraza.ua</option><option value="39">pravda.com.ua</option><option value="40">galka.if.ua</option><option value="41">test.com</option><option value="42">gorodkiev.com.ua</option><option value="43">delo.ua</option><option value="44">rian.com.ua</option><option value="45">irr.ua</option><option value="46">sowa.ua</option><option value="47">healthinfo.ua</option><option value="48">vlebedev.com</option><option value="49">rbc.ua</option><option value="50">bagnet.org</option><option value="51">infocars.org</option><option value="52">autosvit.com.ua</option><option value="53">112.ua</option><option value="54">nv.ua</option><option value="55">online.ua</option><option value="56">zerkalo.io</option><option value="57">glavpost.com</option><option value="58">lukoshko.net</option><option value="59">dtp.kiev.ua</option><option value="60">gazeta.lviv.ua</option><option value="61">stroqato.com</option><option value="62">provce.ck.ua</option><option value="63">newsyou.info</option><option value="64">volynpost.com</option><option value="65">privatka.ua</option><option value="66">portal.lviv.ua</option><option value="67">e-news.com.ua</option><option value="68">espreso.tv</option></select>
+                            </div>
+                            <div class="form-group ">
+                                <label for="adexchangebundle_adunit_unitSize" class="required">Размер</label>
+                                <select id="adexchangebundle_adunit_unitSize" name="adexchangebundle_adunit[unitSize]" class="form-control" autocomplete="off"><option value="1">300x250</option><option value="2" selected="selected">728x90</option><option value="3">300x500</option><option value="4">600x500</option><option value="5">media banner</option><option value="6">240x400</option><option value="7">300x600</option><option value="8">728x500</option><option value="9">600x250</option><option value="10">833x250</option><option value="11">970x90</option><option value="12">custom</option></select>
+                            </div>
+                            <div class="form-group  multiselect-list">
+                                <label class="required">Допустимые типы объявлений</label>
+                                <div id="adexchangebundle_adunit_adType" class="form-control"><input type="checkbox" id="adexchangebundle_adunit_adType_1" name="adexchangebundle_adunit[adType][]" value="1" checked="checked" />                <label for="adexchangebundle_adunit_adType_1">Реклама</label><input type="checkbox" id="adexchangebundle_adunit_adType_2" name="adexchangebundle_adunit[adType][]" value="2" />                <label for="adexchangebundle_adunit_adType_2">Агрессивная реклама</label><input type="checkbox" id="adexchangebundle_adunit_adType_3" name="adexchangebundle_adunit[adType][]" value="3" />                <label for="adexchangebundle_adunit_adType_3">Новости</label></div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="adexchangebundle_adunit_comment">Комментарий</label>
+                                <textarea id="adexchangebundle_adunit_comment" name="adexchangebundle_adunit[comment]" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12" id="tizerAds">
+
+                    <div class="panel panel-default">
+
+                        <div class="panel-heading">
+                            Дизайн баннера
+                        </div>
+
+                        <div class="panel-body">
+
+                            <div id="adpartner-jsunit-1" class="marg20b">
+                                <div class="adpartner-wrapper" id="adsWrp">
+                                </div>
+                                <div class="clr"></div>
+                                <div class="sign">
+                                    Powered by
+                                    <strong>
+                                        <div>Ad</div>
+                                        Partner
+                                    </strong>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div id="customType">
+                                    <div class="form-group row">
+                                        <div class="col-sm-6">
+                                            <label>Ширина банера</label>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="banerWidth" value="300px" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-sm-6">
+                                            <label>Минимальная ширина тизера</label>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="tizerMinWidth" value="300px" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6">
+                                            <label>Максимальная ширина тизера</label>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="tizerMaxWidth" value="300px" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6">
+                                            <label>Высота тизера</label>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="tizerHeight" value="300px" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6">
+                                            <label>Отображать заголовок</label>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="checkbox" class="form-control" id="tizerTitle"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6">
+                                            <label>Отображать текст</label>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="checkbox" class="form-control" id="tizerText"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6">
+                                            <label>Отображать ссылку</label>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="checkbox" class="form-control" id="tizerLink"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-sm-6">
+                                            <label>Количество тизеров</label>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <select id="tizerCount" class="form-control">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-sm-6">
+                                            <label>Тип отображения</label>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <select id="tizerType" class="form-control">
+                                                <option value="1">Текст справа от картинки</option>
+                                                <option value="2">Текст под картинкой</option>
+                                                <option value="3">Текст над картинкой</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <label>Размер изображения</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select id="adImageSize" class="form-control">
+                                            <option value="80px">80x80</option>
+                                            <option value="90px">90x90</option>
+                                            <option value="100px">100x100</option>
+                                            <option value="110px">110x110</option>
+                                            <option value="120px">120x120</option>
+                                            <option value="130px">130x130</option>
+                                            <option value="140px">140x140</option>
+                                            <option value="150px">150x150</option>
+                                            <option value="160px">160x160</option>
+                                            <option value="170px">170x170</option>
+                                            <option value="180px">180x180</option>
+                                            <option value="190px">190x190</option>
+                                            <option value="200px">200x200</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <label>Цвет заголовка</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="titleColor" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <label>Шрифт заголовка</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select id="titleFont" class="form-control">
+                                            <option value="Arial">Arial</option>
+                                            <option value="Verdana">Verdana</option>
+                                            <option value="Times">Times</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <label>Размер шрифта заголовка</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select id="titleSize" class="form-control">
+                                            <option value="9px">9px</option>
+                                            <option value="10px">10px</option>
+                                            <option value="11px">11px</option>
+                                            <option value="12px">12px</option>
+                                            <option value="13px">13px</option>
+                                            <option value="14px">14px</option>
+                                            <option value="15px">15px</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <label>Цвет текста</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="textColor" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <label>Шрифт текста</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select id="textFont" class="form-control">
+                                            <option value="Arial">Arial</option>
+                                            <option value="Verdana">Verdana</option>
+                                            <option value="Times">Times</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <label>Размер шрифта текста</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select id="textSize" class="form-control">
+                                            <option value="9px">9px</option>
+                                            <option value="10px">10px</option>
+                                            <option value="11px">11px</option>
+                                            <option value="12px">12px</option>
+                                            <option value="13px">13px</option>
+                                            <option value="14px">14px</option>
+                                            <option value="15px">15px</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <label>Цвет ссылки</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="linkColor" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <label>Шрифт ссылки</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select id="linkFont" class="form-control">
+                                            <option value="Arial">Arial</option>
+                                            <option value="Verdana">Verdana</option>
+                                            <option value="Times">Times</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <label>Размер шрифта ссылки</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select id="linkSize" class="form-control">
+                                            <option value="9px">9px</option>
+                                            <option value="10px">10px</option>
+                                            <option value="11px">11px</option>
+                                            <option value="12px">12px</option>
+                                            <option value="13px">13px</option>
+                                            <option value="14px">14px</option>
+                                            <option value="15px">15px</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <label>Цвет рамки</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="borderColor" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <label>Толщина рамки</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select id="borderSize" class="form-control">
+                                            <option value="0px">0px</option>
+                                            <option value="1px">1px</option>
+                                            <option value="2px">2px</option>
+                                            <option value="3px">3px</option>
+                                            <option value="4px">4px</option>
+                                            <option value="5px">5px</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group ">
+                                        <label for="adexchangebundle_adunit_customStyle">Стили для баннера</label>
+
+                                        <input type="hidden" name="edit_style" checked value="0" />
+                                        <br /><input type="checkbox" id="enableCustomStyle" name="edit_style" value="1" /> снять блокировку
+                                        <textarea id="adexchangebundle_adunit_customStyle" name="adexchangebundle_adunit[customStyle]" class="form-control" disabled="disabled"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <button type="submit" id="adexchangebundle_adunit_submit" name="adexchangebundle_adunit[submit]" class="btn btn-default btn-success">Сохранить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="hidden" id="adexchangebundle_adunit_styleSetting" name="adexchangebundle_adunit[styleSetting]" value="{&quot;image&quot;:{&quot;size&quot;:&quot;80px&quot;},&quot;title&quot;:{&quot;color&quot;:&quot;#0668a7&quot;,&quot;font&quot;:&quot;Arial&quot;,&quot;size&quot;:&quot;14px&quot;},&quot;text&quot;:{&quot;color&quot;:&quot;#000000&quot;,&quot;font&quot;:&quot;Arial&quot;,&quot;size&quot;:&quot;12px&quot;},&quot;link&quot;:{&quot;color&quot;:&quot;#3aa126&quot;,&quot;font&quot;:&quot;Arial&quot;,&quot;size&quot;:&quot;12px&quot;},&quot;border&quot;:{&quot;color&quot;:&quot;#000000&quot;,&quot;size&quot;:&quot;1px&quot;},&quot;baner&quot;:{&quot;width&quot;:&quot;100%&quot;},&quot;tizer&quot;:{&quot;max_width&quot;:&quot;32.5%&quot;,&quot;min_width&quot;:&quot;300px&quot;,&quot;height&quot;:&quot;95px&quot;,&quot;count&quot;:&quot;4&quot;,&quot;type&quot;:&quot;1&quot;,&quot;title&quot;:&quot;block&quot;,&quot;text&quot;:&quot;block&quot;,&quot;link&quot;:&quot;block&quot;}}" /><input type="hidden" id="adexchangebundle_adunit__token" name="adexchangebundle_adunit[_token]" value="m3w7aNN7YWZHl8UeZsMqJTgM2Uf8Kct11DL23uJrmR8" /></form>
+        </div>
+
+    </div>
+
+    <!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+<!-- jQuery -->
+<script src="/bundles/adexchange/js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/bundles/adexchange/js/bootstrap.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="/bundles/adexchange/js/metisMenu.js"></script>
+
+<!-- Morris Charts JavaScript -->
+<script src="/bundles/adexchange/js/raphael-min.js"></script>
+<script src="/bundles/adexchange/js/morris.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/bundles/adexchange/js/sb-admin-2.js"></script>
+
+<script>
+    var params = params || {};
+    $.extend(params, {
+        finishAtIncrement: '10'
+    });
+</script>
+<script src="/bundles/adexchange/js/main.js"></script>
+
+<script type="text/javascript" src="/bundles/adexchange/js/moment.js"></script>
+<script type="text/javascript" src="/bundles/adexchange/js/daterangepicker.js"></script>
+<script type="text/javascript" src="/bundles/adexchange/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="/bundles/adexchange/js/bootstrap-clockpicker.min.js"></script>
+
+<script type="text/javascript" src="/bundles/adexchange/js/bootstrap-combobox.js"></script>
+
+<!-- jsTree -->
+<script type="text/javascript" src="/bundles/adexchange/js/jstree.min.js"></script>
+
+
+
+
+<script type="text/javascript">
+
+    var size = {"tizer":{"1":"300x250","2":"728x90","3":"300x500","4":"600x500","6":"240x400","7":"300x600","8":"728x500","9":"600x250","10":"833x250","11":"970x90","12":"custom"},"media":{"5":"media banner"}};
+
+    $(document).ready(function() {
+
+        var bannerStyle = '';
+        if($('#adexchangebundle_adunit_styleSetting').val()){
+            var bannerStyle = jQuery.parseJSON($('#adexchangebundle_adunit_styleSetting').val())
+        } else {
+            var bannerStyle = {
+                'image': {
+                    'size': $('#adexchangebundle_adunit_unitSize').val() == 2 ? '80px' : '90px'
+                },
+                'title': {
+                    'color': '#0668a7',
+                    'font': 'Arial',
+                    'size': '14px'
+                },
+                'text': {
+                    'color': '#000000',
+                    'font': 'Arial',
+                    'size': '12px'
+                },
+                'link': {
+                    'color': '#3aa126',
+                    'font': 'Arial',
+                    'size': '12px'
+                },
+                'border': {
+                    'color': '#000000',
+                    'size': '1px'
+                }
+            };
+        }
+
+        if(typeof(bannerStyle.baner) == 'undefined'){
+            bannerStyle['baner'] = {};
+            bannerStyle['tizer'] = {};
+            bannerStyle['baner']['width'] = '100%';
+            bannerStyle['tizer']['max_width'] = '32.5%';
+            bannerStyle['tizer']['min_width'] = '300px';
+            bannerStyle['tizer']['height'] = '95px';
+            bannerStyle['tizer']['count'] = '4';
+            bannerStyle['tizer']['type'] = '1';
+            bannerStyle['tizer']['title'] = 'block';
+            bannerStyle['tizer']['text'] = 'block';
+            bannerStyle['tizer']['link'] = 'block';
+        }
+
+        function showUnitSizeField(unitType) {
+            var $unitSize = $('#adexchangebundle_adunit_unitSize');
+            var unitSizeId = $unitSize.val();
+            $unitSize.empty().html($.map(size[unitType], function(val, i){
+                return $('<option/>', {text: val, value: i})
+            }));
+            if (Object.keys(size[unitType]).indexOf(unitSizeId) >= 0) {
+                $unitSize.val(unitSizeId);
+
+            }
+            setStyle();
+            renderBanner();
+        }
+
+        $('#adexchangebundle_adunit_unit_type').change(function(){
+            showUnitSizeField($(this).val());
+        });
+
+        showUnitSizeField($('#adexchangebundle_adunit_unit_type').val());
+
+        function getTizer()
+        {
+            if ($('#adexchangebundle_adunit_unitSize').val() != 12) {
+                bannerStyle['tizer']['type'] = '1';
+            }
+            switch(bannerStyle['tizer']['type']) {
+                case '1':
+                    return '<div class="adpartner-row half"><a href="#"><img src="/bundles/adexchange/img/image200x200.jpeg" /><div class="adpartner-title">Lorem ipsum rsitpametppconse dolo</div><div class="adpartner-text adpartner-margin">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod te</div><div class="adpartner-link-for-show adpartner-margin">site.url.com.ua</div></a></div>';
+                case '2':
+                    return '<div class="adpartner-row half"><a href="#"><img class="adpartner-top" src="/bundles/adexchange/img/image200x200.jpeg" /><br class="clr"><div class="adpartner-title">Lorem ipsum rsitpametppconse dolo</div><div class="adpartner-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod te</div><div class="adpartner-link-for-show">site.url.com.ua</div></a></div>';
+                case '3':
+                    return '<div class="adpartner-row half flex"><a href="#">' +
+                            '<div class="adpartner-box">' +
+                            '<div class="adpartner-img"><img src="/bundles/adexchange/img/image200x200.jpeg" /></div>' +
+                            '' +
+                            '<div class="adpartner-under">' +
+                            '<div class="adpartner-title">Lorem ipsum rsitpametppconse dolo</div>' +
+                            '<div class="adpartner-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod te</div>' +
+                            '<div class="adpartner-link-for-show">site.url.com.ua</div>' +
+                            '</div>' +
+                            '</div></a>' +
+                            '</div>';
+            }
+        }
+
+        function getAdCount(id){
+            switch(id) {
+                case '1': //300*250
+                    return 2;
+                case '2': //728*90
+                    return 2;
+                case '3': //300*500
+                    return 4;
+                case '4': //600*500
+                    return 6;
+                case '5': //media
+                    return 0;
+                case '6': //240*400
+                    return 3;
+                case '7': //300*600
+                    return 5;
+                case '8': //728*500
+                    return 8;
+                case '9': //600*250
+                    return 4;
+                case '10': //833*250
+                    return 4;
+                case '11': //970x90
+                    return 3;
+                case '12': //custom
+                    return $('#tizerCount').val();
+            }
+        }
+
+        function getBanner(id)
+        {
+            $('#customType').hide();
+            switch(id) {
+                case '1':
+                    return '#adpartner-jsunit-1{width:290px;min-height:237px;padding:7px 4px 4px 4px;}' +
+                            '#adpartner-jsunit-1 a img {width: ' + bannerStyle['image']['size'] + ';height: ' + bannerStyle['image']['size'] + ';float: left;margin: 0 10px 0 0;}' +
+                            '#adpartner-jsunit-1 .adpartner-row{margin:0 0 10px 0;width:100% !important;}' +
+                            '#adpartner-jsunit-1 .half{clear:both;}';
+                case '2':
+                    return '#adpartner-jsunit-1{width:728px;min-height:74px;padding:3px 4px 4px 4px;}' +
+                            '#adpartner-jsunit-1 a img {width: ' + bannerStyle['image']['size'] + ';height: ' + bannerStyle['image']['size'] + ';float: left;margin: 0 10px 0 0;}' +
+                            '#adpartner-jsunit-1 .adpartner-row{margin:0px;}';
+                case '3':
+                    return '#adpartner-jsunit-1{width:290px;min-height:250px;padding:7px 4px 20px 4px;}' +
+                            '#adpartner-jsunit-1 a img {width: ' + bannerStyle['image']['size'] + ';height: ' + bannerStyle['image']['size'] + ';float: left;margin: 0 10px 0 0;}' +
+                            '#adpartner-jsunit-1 .adpartner-row{margin:0 0 10px 0;width:100% !important;}' +
+                            '#adpartner-jsunit-1 .half{clear:both;}';
+                case '4':
+                    return '#adpartner-jsunit-1{width:590px;padding:7px 4px 20px 4px;}' +
+                            '#adpartner-jsunit-1 a img {width: ' + bannerStyle['image']['size'] + ';height: ' + bannerStyle['image']['size'] + ';float: left;margin: 0 10px 10px 0;}' +
+                            '#adpartner-jsunit-1 .adpartner-row{margin:0px;}';
+                case '6':
+                    return '#adpartner-jsunit-1{width:230px;min-height:387px;padding:7px 4px 4px 4px;}' +
+                            '#adpartner-jsunit-1 a img {width: ' + bannerStyle['image']['size'] + ';height: ' + bannerStyle['image']['size'] +';float: left;margin: 0 10px 0 0;}' +
+                            '#adpartner-jsunit-1 .adpartner-row{margin:0 0 10px 0;width:100% !important;}' +
+                            '#adpartner-jsunit-1 .half{clear:both;}';
+                case '7':
+                    return '#adpartner-jsunit-1{width:290px;min-height:250px;padding:7px 4px 20px 4px;}' +
+                            '#adpartner-jsunit-1 a img {width: ' + bannerStyle['image']['size'] + ';height: ' + bannerStyle['image']['size'] +';float: left;margin: 0 10px 0 0;}' +
+                            '#adpartner-jsunit-1 .adpartner-row{margin:0 0 10px 0;width:100% !important;}' +
+                            '#adpartner-jsunit-1 .half{clear:both;}';
+                case '8':
+                    return '#adpartner-jsunit-1{width:718px;min-height:74px;padding:3px 4px 4px 4px;}' +
+                            '#adpartner-jsunit-1 a img {width: ' + bannerStyle['image']['size'] + ';height: ' + bannerStyle['image']['size'] +';float: left;margin: 0 10px 0 0;}' +
+                            '#adpartner-jsunit-1 .adpartner-row{margin:0px;}';
+                case '9':
+                    return '#adpartner-jsunit-1{width:590px;padding:7px 4px 20px 4px;height:205px;}' +
+                            '#adpartner-jsunit-1 a img {width: ' + bannerStyle['image']['size'] + ';height: ' + bannerStyle['image']['size'] +';float: left;margin: 0 10px 10px 0;}' +
+                            '#adpartner-jsunit-1 .adpartner-row{margin:0px;}';
+                case '10':
+                    return '#adpartner-jsunit-1{width:823px;padding:7px 4px 20px 4px;height:205px;}' +
+                            '#adpartner-jsunit-1 a img {width: ' + bannerStyle['image']['size'] + ';height: ' + bannerStyle['image']['size'] +';float: left;margin: 0 10px 10px 0;}' +
+                            '#adpartner-jsunit-1 .adpartner-row{margin:0px;}';
+                case '11':
+                    return  '#adpartner-jsunit-1{width:970px;min-height:74px;padding:3px 4px 4px 4px;}' +
+                            '#adpartner-jsunit-1 a img {width: ' + bannerStyle['image']['size'] + ';height: ' + bannerStyle['image']['size'] +';float: left;margin: 0 10px 0 0;}' +
+                            '#adpartner-jsunit-1 .adpartner-row{margin:0px;}#adpartner-jsunit-1 .half{width:33%;}';
+                case '12':
+                    $('#customType').show();
+                    return  '#adpartner-jsunit-1{max-width:' + bannerStyle['baner']['width'] +';min-height:74px;padding:3px 4px 4px 4px;}' +
+                            '#adpartner-jsunit-1 a img {width: ' + bannerStyle['image']['size'] + ';height: ' + bannerStyle['image']['size'] +';float: left;margin: 0 10px 0 0;}' +
+                            '#adpartner-jsunit-1 .adpartner-row{margin:0px;}' +
+                            '#adpartner-jsunit-1 .half{margin:0 5px 10px 0;float: left;max-width: ' + bannerStyle['tizer']['max_width'] +';min-width: ' + bannerStyle['tizer']['min_width'] +';' +
+                            'height: ' + bannerStyle['tizer']['height'] +';overflow: hidden;}#adpartner-jsunit-1 div.clr{height: 20px}' +
+                            '#adpartner-jsunit-1 .adpartner-title{display: ' + bannerStyle['tizer']['title'] + ';}' +
+                            '#adpartner-jsunit-1 .adpartner-text{display: ' + bannerStyle['tizer']['text'] + ';}' +
+                            '#adpartner-jsunit-1 .adpartner-link-for-show{display: ' + bannerStyle['tizer']['link'] + ';}' +
+                            '#adpartner-jsunit-1 a img.adpartner-top {float:none; margin-bottom:5px;}' +
+                            '#adpartner-jsunit-1 .adpartner-box{margin: 0 auto;position: relative;width:100%;}' +
+                            '#adpartner-jsunit-1 .adpartner-img{bottom: 0;display: block;margin: 0;padding: 0;text-align: center;}' +
+                            '#adpartner-jsunit-1 .adpartner-under{position:absolute;bottom:0;background-color: rgba(51, 51, 51, 0.6); bottom: 0; left: 0; margin: 0 auto; max-width: 300px; overflow: hidden;position: absolute;right: 0;width: 100%;}' +
+                            '#adpartner-jsunit-1 .adpartner-img img{display:block;float:none;height: auto;margin:0;width:100%;max-width: ' + bannerStyle['image']['size'] + ';}' +
+                            '#adpartner-jsunit-1 .flex{display: flex; flex-flow: row wrap;}' +
+                            '#adpartner-jsunit-1 .adpartner-under .adpartner-title{padding:2px 5px}' +
+                            '#adpartner-jsunit-1 .adpartner-under .adpartner-text{padding:2px 5px}' +
+                            '#adpartner-jsunit-1 .adpartner-under .adpartner-link-for-show{padding:2px 5px}';
+            }
+        }
+
+        function renderBanner() {
+            var style = '#adpartner-jsunit-1 {margin: 0px;font-family: Arial;padding: 7px;border: ' + bannerStyle['border']['size'] + ' solid ' + bannerStyle['border']['color'] + ';position: relative;}' +
+                    '#adpartner-jsunit-1 a {text-decoration: none;}' +
+                    '#adpartner-jsunit-1 .adpartner-wrapper {padding:0px;margin:0px;}' +
+                    '#adpartner-jsunit-1 .adpartner-row {list-style: none;display: block;clear: both;margin-bottom: 5px;}' +
+                    '#adpartner-jsunit-1 .adpartner-row:last-child {margin-bottom: 0px;}' +
+                    '#adpartner-jsunit-1 a img {float:left;}' +
+                    '#adpartner-jsunit-1 .adpartner-title {font-family:' + bannerStyle['title']['font'] + ';line-height: 16px;font-weight: normal;text-align:left;color: ' + bannerStyle['title']['color'] +
+                    ';font-size: ' + bannerStyle['title']['size'] + ';margin: 0px;padding: 0px;text-decoration: underline;}' +
+                    '#adpartner-jsunit-1 .adpartner-title:visited {color: ' + bannerStyle['title']['color'] + ';}' +
+                    '#adpartner-jsunit-1 .adpartner-title:hover {text-decoration: none;}' +
+                    '#adpartner-jsunit-1 .adpartner-link-for-show {font-family:' + bannerStyle['link']['font'] +
+                    ';line-height: 14px;font-weight: normal;text-align:left;color: ' + bannerStyle['link']['color'] + ';font-size: ' + bannerStyle['link']['size'] + ';margin: 5px 0 0 0;}' +
+                    '#adpartner-jsunit-1 .adpartner-text {font-family:' + bannerStyle['text']['font'] + ';line-height: 14px;font-weight: normal;text-align:left;font-size: ' + bannerStyle['text']['size'] +
+                    ';margin: 3px 0 0 0;color: ' + bannerStyle['text']['color'] +';}' +
+                    '#adpartner-jsunit-1 .adpartner-margin {margin-left: 100px;}' +
+                    '#adpartner-jsunit-1 .half {width: 49%;margin-right: 1%;float: left;clear: none;}' +
+                    '#adpartner-jsunit-1 .zero {width: 1px;height: 1px;position:absolute;left:-9999px;}' +
+                    '#adpartner-jsunit-1 .sign{position:absolute;bottom:3px;text-align:right;right:3px;font-size:11px;padding:3px;background:#FFFFFF;}' +
+                    '#adpartner-jsunit-1 .sign div {color: #e31a1f; font-size: 11px;display:inline;}' +
+                    '#adpartner-jsunit-1 .clr{height:1px;clear:both;}';
+
+            style = style + getBanner($('#adexchangebundle_adunit_unitSize').val());
+
+            $('#st1').remove();
+            $( '<style id="st1">' + style + '</style>' ).appendTo( "head" );
+
+            adCount = getAdCount($('#adexchangebundle_adunit_unitSize').val())
+            $('#adsWrp').empty();
+            if(adCount==0){
+                $('#tizerAds').hide();
+            } else {
+                $('#tizerAds').show();
+            }
+            for(i=1;i<=adCount;i++) {
+                $('#adsWrp').append(getTizer());
+            }
+            updateSetting();
+        }
+
+        renderBanner();
+
+        $('#linkFont').change(function(){
+            bannerStyle['link']['font'] = $(this).val();
+            renderBanner();
+        });
+        $('#linkSize').change(function(){
+            bannerStyle['link']['size'] = $(this).val();
+            renderBanner();
+        });
+        $('#linkColor').change(function(){
+            bannerStyle['link']['color'] = $(this).val();
+            renderBanner();
+        });
+        $('#textFont').change(function(){
+            bannerStyle['text']['font'] = $(this).val();
+            renderBanner();
+        });
+        $('#textSize').change(function(){
+            bannerStyle['text']['size'] = $(this).val();
+            renderBanner();
+        });
+        $('#textColor').change(function(){
+            bannerStyle['text']['color'] = $(this).val();
+            renderBanner();
+        });
+        $('#titleFont').change(function(){
+            bannerStyle['title']['font'] = $(this).val();
+            renderBanner();
+        });
+        $('#titleSize').change(function(){
+            bannerStyle['title']['size'] = $(this).val();
+            renderBanner();
+        });
+        $('#titleColor').change(function(){
+            bannerStyle['title']['color'] = $(this).val();
+            renderBanner();
+        });
+        $('#adImageSize').change(function(){
+            bannerStyle['image']['size'] = $(this).val();
+            renderBanner();
+        });
+        $('#borderSize').change(function(){
+            bannerStyle['border']['size'] = $(this).val();
+            renderBanner();
+        });
+        $('#borderColor').change(function(){
+            bannerStyle['border']['color'] = $(this).val();
+            renderBanner();
+        });
+        $('#banerWidth').change(function(){
+            bannerStyle['baner']['width'] = $(this).val();
+            renderBanner();
+        });
+        $('#tizerMaxWidth').change(function(){
+            bannerStyle['tizer']['max_width'] = $(this).val();
+            renderBanner();
+        });
+        $('#tizerMinWidth').change(function(){
+            bannerStyle['tizer']['min_width'] = $(this).val();
+            renderBanner();
+        });
+        $('#tizerHeight').change(function(){
+            bannerStyle['tizer']['height'] = $(this).val();
+            renderBanner();
+        });
+        $('#tizerCount').change(function(){
+            bannerStyle['tizer']['count'] = $(this).val();
+            renderBanner();
+        });
+        $('#tizerTitle').change(function(){
+            bannerStyle['tizer']['title'] = this.checked ? 'block' : 'none';
+            renderBanner();
+        });
+        $('#tizerText').change(function(){
+            bannerStyle['tizer']['text'] = this.checked ? 'block' : 'none';
+            renderBanner();
+        });
+        $('#tizerLink').change(function(){
+            bannerStyle['tizer']['link'] = this.checked ? 'block' : 'none';
+            renderBanner();
+        });
+        $('#tizerType').change(function(){
+            bannerStyle['tizer']['type'] = $(this).val();
+            renderBanner();
+        });
+
+        function setStyle(){
+            $('#adImageSize').val(bannerStyle['image']['size']);
+            $('#linkColor').val(bannerStyle['link']['color']);
+            $('#linkSize').val(bannerStyle['link']['size']);
+            $('#linkFont').val(bannerStyle['link']['font']);
+            $('#textColor').val(bannerStyle['text']['color']);
+            $('#textSize').val(bannerStyle['text']['size']);
+            $('#textFont').val(bannerStyle['text']['font']);
+            $('#titleColor').val(bannerStyle['title']['color']);
+            $('#titleSize').val(bannerStyle['title']['size']);
+            $('#titleFont').val(bannerStyle['title']['font']);
+            $('#borderSize').val(bannerStyle['border']['size']);
+            $('#borderColor').val(bannerStyle['border']['color']);
+            $('#banerWidth').val(bannerStyle['baner']['width']);
+            $('#tizerMaxWidth').val(bannerStyle['tizer']['max_width']);
+            $('#tizerMinWidth').val(bannerStyle['tizer']['min_width']);
+            $('#tizerHeight').val(bannerStyle['tizer']['height']);
+            $('#tizerCount').val(bannerStyle['tizer']['count']);
+            $('#tizerType').val(bannerStyle['tizer']['type']);
+            $('#tizerTitle').attr('checked', bannerStyle['tizer']['title'] == 'block' ? true : false);
+            $('#tizerText').attr('checked', bannerStyle['tizer']['text'] == 'block' ? true : false);
+            $('#tizerLink').attr('checked', bannerStyle['tizer']['link'] == 'block' ? true : false);
+        }
+
+        setStyle();
+
+        function changeBanner(id) {
+            if (id == 2 || id == 9){
+                bannerStyle['image']['size'] = '80px';
+            } else {
+                bannerStyle['image']['size'] = '90px';
+            }
+            setStyle();
+            renderBanner();
+        }
+
+        $('#adexchangebundle_adunit_unitSize').change(function(){
+            changeBanner($(this).val());
+        });
+
+        function updateSetting(){
+            $('#adexchangebundle_adunit_styleSetting').val(JSON.stringify(bannerStyle));
+        }
+
+
+        $('#enableCustomStyle').click(function(){
+            if(this.checked){
+                $('#adexchangebundle_adunit_customStyle').attr('disabled', false);
+            } else {
+                $('#adexchangebundle_adunit_customStyle').attr('disabled', true);
+            }
+        });
+    });
+
+</script>
+</body>
+
+</html>
