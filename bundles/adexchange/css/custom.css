@@ -82,3 +82,43 @@
 .upload-progress { position:relative;border-radius: 3px;height:25px; margin-top:10px; }
 .upload-bar { background-color: #f1da36; width:0%; height:25px; border-radius: 3px; }
 .upload-percent { position:absolute; display:inline-block; top:3px; left:48%; }
+
+.multiselect-list .form-control .form-margin-2 input {
+    margin-left: 6%;
+}
+.multiselect-list .form-control .form-margin-2 label {
+    width: 88%;
+}
+.multiselect-list .form-control .form-margin-3 input {
+    margin-left: 12%;
+}
+.multiselect-list .form-control .form-margin-3 label {
+    width: 82%;
+}
+.multiselect-list .form-control .form-margin-4 input {
+    margin-left: 18%;
+}
+.multiselect-list .form-control .form-margin-4 label {
+    width: 76%;
+}
+
+.csseditor{
+    display: none;
+}
+.banner-holder{
+    width: 800px;
+    height: 200px;
+    border:0;
+    box-shadow: 1px 1px 6px #000;
+    overflow: auto;
+    background:url('/bundles/adexchange/img/preview-bg.png') top left repeat;
+}
+.ace_editor {
+    border: 1px solid lightgray;
+    height: 600px;
+    width: 100%;
+}
+#validate_form {
+    display: none;
+    visibility: hidden;
+}
